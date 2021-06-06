@@ -82,7 +82,7 @@ void AFloorSwitch::UpdateDoorLocation(float Z)
 
 void AFloorSwitch::CloseDoor()
 {
-	if (!bCharacterOnSwitch)
+	if (bCharacterOnSwitch == false)
 	{
 		RaiseFloorSwitch();
 		LowerDoor();
