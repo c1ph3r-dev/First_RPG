@@ -1,0 +1,29 @@
+// Copyright Jonathan Justin Rampersad 2021
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Pawn.h"
+#include "Critter.generated.h"
+
+UCLASS()
+class FIRST_RPG_API ACritter : public APawn
+{
+	GENERATED_BODY()
+
+public:
+	// Sets default values for this pawn's properties
+	ACritter();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mesh)
+	class USkeletalMeshComponent* MeshComponent;
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+};
